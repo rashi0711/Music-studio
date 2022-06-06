@@ -1,0 +1,178 @@
+@media(max-width:992px) and (min-width:750px)
+{
+    /* setting 'favourite' nav-item of navbar has display none */
+    .nav-item
+    {
+       display: none;
+    }   
+    /* latest-release-songs to have grid containing  one column instead of two */
+    .latest-release-songs
+    {
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    grid-gap:1rem;
+    } 
+    /* artists to have grid containing 3 column instead of 6 */
+    .artists
+    {
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-gap:2rem;
+        font-size: 1rem;
+    }
+    /* stations to have grid containing  3 column instead of 6 */
+    #stations
+    {
+     display: grid;
+     grid-template-columns: repeat(3,auto);
+     grid-gap:.8rem;
+     border-radius:0;
+    }
+    .station-img img
+    {
+        opacity: 0.5;
+        border-radius: 50%;
+    }
+    .genre-name
+    {
+    position: absolute;
+    text-align: center;
+    font-size: 1.2rem;
+    top:32%;
+    left:37%;
+    }
+   .eng-1 p,.hin-1 p,.kpop-1 p
+   {
+     font-size: .8rem;
+   }
+   /* adjusting music-player */
+   /* adjusting style of center icons of music player */
+   .song-play-center-icons-button i
+   {
+    margin-left:2rem;
+    font-size: 1.5rem;
+   }
+    /* adjusting style of right icons of music player */
+   .song-play-right-icons i
+   {
+    margin-left: 20px;
+    font-size:1.1rem;
+   }
+    /* adjusting style of big range of music player */
+   .total-range
+   {
+    width:350px;
+   }
+   .range small
+   {
+     font-size: .7rem;
+     margin:0 .5rem;
+   }
+   /* adjusting style of small range of music player */
+   .total-range-1
+   {
+    display: none;
+   } 
+}
+@media(max-width:750px)
+{
+    /* setting input-group display as none */
+    .input-group
+    {
+        display: none;
+    }
+    /* setting nav-item 'favourites' as display as none*/
+    .nav-item
+    {
+       display: none;
+    }
+    .container
+    {
+       display: grid;
+       grid-template-columns: 100%;
+       margin:2rem;
+       padding:0 1rem;
+    }
+    /* latest-release-songs to have grid containing  one column instead of two */
+    .latest-release-songs
+     {
+      display: grid;
+      grid-template-columns: repeat(1,auto);
+      grid-gap:1rem;
+     } 
+    /* artists to have grid containing 2 column instead of 3 */
+    .artists
+    {
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-gap:2rem;
+        font-size: 1rem;
+    }
+    /* stations to have grid containing 2 column instead of 3 */
+    #stations
+    {
+     display: grid;
+     grid-template-columns: repeat(2,auto);
+     grid-gap:.8rem;
+     border-radius:0;
+    }
+    /* genres to have grid containing 2 column instead of 6 */
+    .genres
+    {
+        grid-template-columns: repeat(2,auto);
+    }
+    .genre-name
+    {
+    position: absolute;
+    text-align: center;
+    font-size: 1.2rem;
+    top:32%;
+    left:32%;
+    }
+   .eng-1 p,.hin-1 p,.kpop-1 p 
+    {
+    font-size: .8rem;
+    }
+    /* .latest-english,.latest-hindi,.latest-kpop to have grid of 3 column instead of 6 */
+    .latest-english,.latest-hindi,.latest-kpop
+    {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap:0.5rem;
+    }
+   .station-name
+    {
+       font-size:1.3rem;
+    }
+    /* adjusting music player */
+    .song-play-pause
+    {
+    display:grid;
+    grid-template-columns: 20% 80%;
+    padding:1rem;
+    }
+    /* .song-play-artist
+    {
+        display: none;
+    } */
+    /* adjusting style of right icons of music player */
+    .song-play-right-icons
+    {
+        display: none;
+    }
+    .song-play-center-icons
+    {
+        margin:auto;
+    }
+    .song-play-center-icons-button i
+    {
+    margin-left:2rem;
+    font-size: 1.5rem;
+    }
+   .total-range
+    {
+    width:300px;
+    }
+
+}
+

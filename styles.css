@@ -1,0 +1,330 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* use of css variables */
+:root
+{
+    --primary-color:#090910;
+    --secondary-color:#3D0000;
+}
+body{
+  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  color:#fff;
+}
+ul{
+    list-style-type: none;
+}
+/* style for h3 heading */
+.h3-heading
+{
+  margin-bottom: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+/* Nav-Bar */
+#navbar
+{
+    margin:2rem;
+}
+.nav-items
+{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size:1.5rem;
+}
+.logo-title,.form-profile-icons
+{
+    display: flex;
+}
+/* style for logo(music-studio-image) */
+.logo
+{
+    border-radius: 50%;
+    width:90px;
+    height:80px;
+}
+/* style for title  */
+.title
+{
+    margin-left: 1rem;
+}
+.logo span
+{
+    display:block;
+    font-weight: 700;
+    font-size:1.7rem;
+}
+/* style for 'favourites' item */
+.nav-item
+{
+    font-size: 1.3rem;
+}
+/* style for input group of form */
+.input-group
+{
+    display: flex;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding:0 .8rem;
+} 
+/* style for input box of input group */
+.input-group input
+{
+    background: transparent;
+    border:0;
+    padding:9px;
+    font-size: 1.2rem;
+    max-width: 100%;
+}
+.input-group input::placeholder
+{
+    color: #fff;
+}
+/* style for input box of input group when focus */
+.input-group input:focus
+{
+    outline:none;
+    color:#fff;
+}
+/* style for notification bell  */
+.bell
+{
+    position: relative;
+    margin:0 1.5rem;
+    font-size: 1.2rem;
+}
+/* style for red dot on notification bell */
+.dot
+{
+    position: absolute;
+    top:10%;
+    right:3%;
+    height:0.4rem;
+    width:0.4rem;
+    background-color: red;
+    border-radius: 50%;
+}
+/* style for profile-pic */
+.profile-pic{
+    
+    width:70px;
+    height:70px;
+   
+}
+.profile-pic img{
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+ /* container */
+.container
+{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-gap:1rem;
+    margin:2rem;
+    padding:0 1rem;
+    animation:transistionIn 0.75s;
+}
+/* animation for page transistion on page loading */
+@keyframes transistionIn
+{
+    from{
+       opacity:0;
+       transform:rotateX(-10deg);
+    }
+    to
+     {
+         opacity:1;
+         transform: rotateX(0);
+     }
+}
+/* style for description section of playlist */
+#description
+{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    margin:2rem 0;
+    background-color: var(--secondary-color);
+    
+}
+/* style for image in description section of playlist */
+.des-img img
+{
+ max-width: 100%;
+ height:100%;
+}
+/* style for  description in description section of playlist */
+.des
+{
+    padding:2rem;
+}
+.des-title h4{
+    color:lightgray;
+}
+.des-info
+{
+    display: flex;
+    justify-content: space-between;
+}
+.des p{
+    line-height: 1.7rem;
+    font-size: 1.1rem;
+    color:lightgray;
+    margin-top: 1rem;
+    
+}
+/* style for buttons in description section of playlist */
+button
+{
+    margin: 1.5rem 1.5rem 1rem 0;
+    padding:12px 40px;
+    background:linear-gradient(90deg,#090910,#3D0000);
+    color:#fff;
+    font-size: 1.3rem;
+    border:0;
+    border:1px solid #000;
+    border-radius: 5px;
+}
+/* style for buttons in description section of playlist on hovering*/
+button:hover{
+    opacity:0.8;
+    cursor: pointer;
+}
+/* style for buttons in description section of playlist when active */
+button:active{
+    transform: scale(.95);
+}
+/* style for .artist-songs-list-item section */
+.artist-songs-list-item
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    padding:.8rem;
+    margin:1rem 0;
+    border-radius: 10px;
+    
+}
+/* style for .artist-songs-list-item-info section */
+.artist-songs-list-item-info
+{
+    justify-self: flex-start;
+    display: flex;
+    padding:0 .5rem;
+}
+.item-info
+{
+    display: flex;
+    justify-self:flex-start;
+} 
+.item-info img{
+    width: 50px;
+    height:50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px #fff;
+    margin-top: 5px;
+    
+}
+.info
+{
+   margin:.7rem;
+} 
+.info small{
+    color:#999;
+}
+/* serial-number */
+.serial
+{
+    margin-right: 10px;
+    margin-top: 12px;
+    color:#999;
+    font-size: 1rem;
+}
+/* style for artists-songs-list-icons-buttons  */
+.icons-btn
+{
+    justify-self: flex-end;
+    display: flex;
+    margin-top: 10px;
+}
+/* style for icons-button */
+.heart,.plus
+{
+    padding:0 .7rem
+}
+.heart
+{
+    justify-self: flex-end;
+}
+
+/* style for div containing similar-artists-section */
+#similar-artists
+{
+    margin:3rem 0;
+}
+
+/* style for similar-artists-section-heading */
+.similar-artists-heading
+{
+    display: flex;
+    justify-content: space-between;
+}
+/* style for similar-artists-list-items */
+.similar-artists-list-item
+{
+    display: flex;
+    justify-content: space-between;
+    margin:1rem 0;
+}
+/* style for image of similar-artists-image */
+.similar-artists-img
+{
+    display: flex;
+}
+/* style for information of similar-artists */
+.similar-artists-info
+{
+    margin-left: 10px;
+}
+/* style for song-time of similar-artists-image */
+.similar-artists-time
+{
+    display: flex;
+    flex-direction:column;
+}
+/* style for recently-played-song-section */
+#recently-played
+{
+    margin:4.2rem 0;
+}
+/* style for heading of recently-played-song-section */
+.recently-played-heading
+{
+    display: flex;
+    justify-content: space-between;
+   
+}
+/* style for recently-played-list-item */
+.recently-played-list-item
+{
+    display: flex;
+    justify-content: space-between;
+    margin:1rem 0;
+}
+/* style for image of recently-played-song-section */
+.recently-played-img
+{
+    display: flex;
+}
+/* style for information of  recently-played-song-section */
+.recently-played-info
+{
+    margin-left:.5rem;
+}

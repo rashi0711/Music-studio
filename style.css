@@ -1,0 +1,745 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* use of css variables */
+:root
+{
+    --primary-color:#090910;
+    --secondary-color:#3D0000;
+}
+html
+{
+   position: relative;
+}
+body
+{
+  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  color:#fff;
+  overflow-x: hidden;
+}
+ul
+{
+    list-style-type: none;
+}
+/* style for h3 heading */
+.h3-heading
+{
+  margin-bottom: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+/* Nav-Bar */
+#navbar
+{
+    margin:2rem;
+}
+.nav-items
+{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size:1.5rem;
+}
+.logo-title,.form-profile-icons
+{
+    display: flex;
+}
+/* style for logo(music-studio-image) */
+.logo
+{
+    border-radius: 50%;
+    width:90px;
+    height:80px;
+}
+/* style for title  */
+.title
+{
+    margin-left: 1rem;
+}
+.title span
+{
+    display:block;
+    font-weight: 700;
+    font-size:1.7rem;
+}
+/* style for 'favourites' item */
+.nav-item
+{
+    font-size: 1.3rem;
+}
+/* style for input group of form */
+.input-group
+{
+    display: flex;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    padding:0 .8rem;
+} 
+/* style for input box of input group */
+.input-group input
+{
+    background: transparent;
+    border:0;
+    padding:9px;
+    font-size: 1.2rem;
+    max-width: 100%;
+}
+.input-group input::placeholder
+{
+    color: #fff;
+}
+/* style for input box of input group when focus */
+.input-group input:focus
+{
+    outline:none;
+    color:#fff;
+}
+/* style for notification bell  */
+.bell
+{
+    position: relative;
+    margin:0 1.5rem;
+    font-size: 1.2rem;
+}
+/* style for red dot on notification bell */
+.dot
+{
+    position: absolute;
+    top:10%;
+    right:3%;
+    height:0.4rem;
+    width:0.4rem;
+    background-color: red;
+    border-radius: 50%;
+}
+/* style for profile-pic */
+.profile-pic{
+    
+    width:70px;
+    height:70px;
+   
+}
+.profile-pic img{
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+/* container */
+.container
+{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-gap:1rem;
+    margin:2rem;
+    padding:0 1rem;
+    animation: transistionIn 0.75s;
+}
+/* animation for page transistion on page loading */
+@keyframes transistionIn
+{
+    from{
+       opacity:0;
+       transform:rotateX(-10deg);
+    }
+    to
+     {
+         opacity:1;
+         transform: rotateX(0);
+     }
+}
+#main
+{
+    position: relative;
+}
+/* carousel */
+#main-1
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height:45vh;
+    margin:0 auto;
+    overflow: hidden;
+}
+#main-carousel
+{
+    overflow: hidden;
+}
+/* styles for carousel images */
+#main-carousel img
+{
+    width:20%;
+    height:45vh;
+    float: left;
+}
+#main-carousel .carousel{
+    position: relative;
+    width: 500%;
+    margin:0;
+    left:0;
+    animation:25s moving ease infinite;
+}
+/* indicator below carousel */
+.indicator{
+    width: 100%;
+    max-width: 100%;
+    height: 6px;
+    background: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    animation: indicating 24s ease infinite; 
+}
+/* animation for sliding images */
+@keyframes moving
+{
+    0%
+    {
+        left:0%;
+    }
+    20%
+    {
+        left:-100%;
+    }
+    40%
+    {
+        left:-200%;
+    }
+    60%
+    {
+        left:-300%;
+    }
+    80%
+    {
+        left:-400%;
+    }
+    100%
+    {
+        left:0%;
+    }
+}
+/* animations for indicator sliding */
+@keyframes indicating{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0;
+    }
+}  
+/* styles for carousel buttons */
+.carousel-buttons
+{
+    display: flex;
+}
+.prev{
+    position: absolute;
+    top:5%;
+    left:0;
+}
+.next{
+    position: absolute;
+    top:5%;
+    right:0;
+}
+.prev a,.next a{
+    color:#fff;
+    font-size: 3.2em;
+    text-decoration: none;
+}
+/* main-release-section */
+#main-release-section,#popular-artists
+{
+    margin:4rem 0;
+}
+/* group of latest-release-songs */
+.latest-release-songs
+{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap:1rem;
+}
+/* single latest song */
+.latest-release-song
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin:0 .5rem;
+}
+/* style for latest-release-song image and information */
+.latest-release-song-img-info
+{
+    display: flex;
+    grid-gap:1rem;
+}
+/* change style for heading of song name */
+.song-name h4{
+    font-size: 1.2rem;
+}
+/* style for latest-release-song image */
+.latest-release-song img{
+    height:100%;
+    width:80%;
+    border-radius: 10px;
+}
+/* style for latest-release-song image on hovering */
+.latest-release-song img:hover
+{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* style for ellipsis icon */
+.ellipsis-icon,.ellipsis-icon1,.ellipsis-icon2,.ellipsis-icon3
+{
+    position: relative;
+}
+#ellipsis-options,#ellipsis-options1,#ellipsis-options2,#ellipsis-options3
+{
+   display: none;
+   position:absolute;
+   height:0;
+   width: 0;
+}
+/* styles when ellipsis-options is targeted */
+#ellipsis-options:target,
+#ellipsis-options1:target,
+#ellipsis-options2:target,
+#ellipsis-options3:target{
+    display: block;
+    position:absolute;
+    height:130px;
+    width:130px;
+    transform: translate(-125px,-8px);
+    overflow: hidden;
+    
+}
+/* styles for list of ellipsis-options  */
+.options
+{
+    background-color: var(--secondary-color);
+    color:#fff;
+    padding:.5rem 0.5rem 0 0.5rem;
+    position: relative;
+}
+/* styles for list-item of ellipsis-options  */
+.options li{
+    font-size: .8rem;
+    font-weight: bold;
+    padding: .3rem 0;
+    border-bottom: 1px solid #000;
+}
+/* styles for span of first option of list item of ellipsis-options  */
+.options-1 span
+{
+    position: absolute;
+    top:0;
+    right:0;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color:#fff;
+    padding:2px 8px;
+}
+/* style for anchor tag of latest-release-section*/
+.latest-release-song a:visited,.latest-release-song a
+{
+    color:#fff;
+    text-decoration: none;
+}
+/* styles for remove-button in ellipsis-options list for closing list */
+#remove-options
+{
+    display:none;
+}
+
+
+/* style for popular-artists-section   */
+.artists
+{
+    display: grid;
+    grid-template-columns: repeat(6,16%);
+    font-size: 1rem;
+}
+#artist6,
+#artist1,
+#artist2,
+#artist3,
+#artist4,
+#artist5{
+  text-align: center;
+  margin:0 .5rem;
+  position:relative;
+  max-width: 100%;
+}
+/* styles for artist images */
+#artist6 img,
+#artist1 img,
+#artist2 img,
+#artist3 img,
+#artist4 img,
+#artist5 img{
+    max-width:100%;
+    max-height:100%;
+    border-radius: 50%;
+
+}
+/* style for popular-artists-section on hovering   */
+.artist:hover{
+    opacity: .8;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#pause1,#pause2,#pause3,#pause4,#pause5,#pause6
+{
+    display: none;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+#artist1:active #pause1,
+#artist2:active #pause2,
+#artist3:active #pause3,
+#artist4:active #pause4,
+#artist5:active #pause5,
+#artist6:active #pause6
+{
+    display: block;
+    position: absolute;
+    top:60px;
+    left:60px;
+}
+/* style for popular-station-section   */
+#stations
+{
+    display: grid;
+    grid-template-columns: repeat(6,16%);
+    background:var(--secondary-color);
+    grid-gap:.5rem;
+    padding: .5rem 0;
+}
+/* style for popular-station-images div   */
+.station-img
+{
+    position:relative;
+    text-align: center;
+    margin:0 .5rem;
+   
+}
+/* style for popular-station-images   */
+.station-img img{
+    opacity: 0.5;
+    max-width:80%;
+    min-height:80%;
+    border-radius: 50%;
+    
+}
+/* style for popular-station-name   */
+.station-name
+{
+    position:absolute;
+    left:30%;
+    bottom:45%;
+    font-size: 1rem;
+    font-weight: 700;
+    z-index:1;
+    
+}
+/* style for genres   */
+#genres
+{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-gap:.5rem;
+    margin:2rem 0;
+}
+/* style for particular-genre   */
+.genre{
+    position: relative;
+}
+/* style for genre  on hovering  */
+.genre:hover
+{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* style for genre image*/
+.genre img
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+/* style for genre name  */
+.genre-name
+{
+    position: absolute;
+    text-align: center;
+    font-size: 1.8rem;
+    top:35%;
+    left:35%;
+}
+
+/* style for english ,hindi and kpop latest songs section */
+#english,#hindi,#kpop
+{
+    margin:2rem 0;
+}
+.latest-english,.latest-hindi,.latest-kpop
+{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+}
+.eng-1,.hin-1,.kpop-1
+{
+    margin:0 .5rem;
+}
+.eng-1 img,.hin-1 img,.kpop-1 img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+/* style for queue section */
+#queue
+{
+    padding:.7rem;
+    margin-right:1rem;
+}
+.link-dropdown
+{
+ float: right;
+ margin-right: 4rem;
+}
+/* style for queue-heading*/
+.queue-heading h2{
+    display: inline;
+}
+/* style for queue dropdown menu */
+#queue-dropdown
+{
+ display: none;
+}
+#queue-dropdown:target{
+    opacity: 1;
+    display: block;
+    position: absolute;
+    height:70px;
+    width:130px;
+    background-color: #fff;
+    color:#111;
+    overflow: hidden;
+   
+}
+/* style for queue-dropdown-menu-options */
+.queue-dropdown-options
+{
+    padding:.5rem;
+}
+/* style for queue-dropdown-menu-item  */
+.queue-dropdown-options li
+{
+    font-size: .8rem;
+    font-weight: bold;
+    padding: .3rem 0;
+   
+}
+/* style for queue-dropdown-menu-first-child*/
+.queue-dropdown-options li:first-child
+{
+   border-bottom: 1px solid #000;
+}
+/* style for queue-anchor-tag*/
+.queue-heading a,.queue-heading:visited,#queue a
+{
+    color:#fff;
+    text-decoration: none;
+}
+.queue-dropdown-options
+{
+    background-color: var(--secondary-color);
+}
+.queue-dropdown-options li{
+    color:#fff;
+}
+.queue-dropdown-options span
+{
+    background-color:var(--primary-color);
+}
+/* style for queue-item-song-info*/
+.queue-list
+{
+    margin-top: 2rem;
+}
+.queue-list-item-info
+{
+    display: flex;
+}
+/* style for queue-list-item*/
+.queue-list-item
+{
+    display: flex;
+    justify-content: space-between;
+    margin:10px 0;
+
+} 
+/* style for queue-serial-number */
+.serial
+{
+    margin-right: 10px;
+    margin-top: 12px;
+    color:#999;
+    font-size: .8rem;
+}
+ .item-info
+{
+    display: flex;
+    justify-self: flex-start;
+} 
+.item-info img{
+    width: 60px;
+    height:60px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px #fff;
+}
+.info
+{
+  margin-left: 0.5rem;
+} 
+/* current-song-playing in music player */
+#song-play
+{
+ display: none;
+ position: absolute;
+ height:0;
+ transition: 0.7s ease-in;
+}
+#song-play:target
+{
+  display: block;
+  width:100%;
+  height:auto;
+  position: absolute;
+  bottom:0;
+  left:0;
+  background-color: #111;
+  color:#fff;
+  
+}
+.song-play-pause
+{
+    display:grid;
+    grid-template-columns: 20% 60% 20%;
+    padding:1rem;
+}
+/* style for song image and title currently playing */
+.song-play-img-title
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.song-play-artist
+{
+        display: block;
+}
+.song-play-img-title img
+{
+    width:60px;
+    height:60px;
+    border-radius: 10px;
+    margin-right:1rem;
+}
+/* style for icons in left of song play div */
+.song-play-left-icons
+{
+    display: flex;
+}
+/* style for ban and heart icons */
+.ban,.heart
+{
+    margin: 10px 0 0 20px;
+
+}
+/* style for icons in center of song play div */
+.song-play-center-icons{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin:auto;
+}
+.song-play-center-icons-button
+{
+    display: flex;
+    justify-content: center;
+}
+.song-play-center-icons-button i
+{
+    margin-left:2rem;
+    font-size: 1.8rem;
+}
+/* style for icons in right of song play div */
+.song-play-right-icons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.song-play-right-icons i
+{
+    margin-left: 20px;
+    font-size:1.4rem;
+
+}
+/* style for big range in center */
+.range
+{
+    display: flex;
+    justify-content: center;
+    margin-top:1.4rem;
+}
+/* style for entire range in center */
+.total-range
+{
+    width:500px;
+    height:4px;
+    background-color: #999;
+    border-radius: 20px;
+    position: relative;
+}
+/* style for completed part of range in center */
+.completed-range
+{
+    width:40%;
+    height:4px;
+    background-color:#3D0000;
+    border-radius: 20px;
+}
+.completed-range i{
+    position: absolute;
+    left:40%;
+    top:-5px;
+}
+/* style for small range in right */
+.range small
+{
+    font-size: .8rem;
+    margin:0 .5rem;
+}
+/* style for entire small range in right */
+.total-range-1
+{
+    width:100px;
+    height:5px;
+    background-color: #999;
+    border-radius: 20px;
+    position: relative;
+    margin:0 1rem;
+}
+.total-range-1 .completed-range i
+{
+    font-size: 1rem;
+    position: absolute;
+    left:20%;
+    top:-5px;
+}
